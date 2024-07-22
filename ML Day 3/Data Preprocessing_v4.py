@@ -168,13 +168,4 @@ df_p = winsor_percentile.fit_transform(df[['Salaries']])
 sns.boxplot(df_p.Salaries)
 
 
-##############################################
-#### zero variance and near zero variance ####
-
-# If the variance is low or close to zero, then a feature is approximately constant and will not improve the performance of the model.
-# In that case, it should be removed. 
-
-df.var() # variance of numeric variables
-df.var() == 0
-df.var(axis = 0) == 0
 
