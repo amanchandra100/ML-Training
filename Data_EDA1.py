@@ -10,7 +10,7 @@ import pandas as pd
 dir(pd)
 
 # Read data into Python
-education = pd.read_csv(r"C:\Users\mrper\OneDrive\Desktop\Machine learning\education.csv")
+education = pd.read_csv("education.csv")
 #Education = pd.read_csv("C:/Data/education.csv").
 
 A = 10
@@ -40,6 +40,9 @@ education.gmat.skew()
 # Fourth moment business decision
 education.workex.kurt()
 
+
+
+#inivariate visualization
 # Data Visualization
 import matplotlib.pyplot as plt
 import numpy as np
@@ -52,7 +55,7 @@ plt.bar(height = education.workex, x = np.arange(1, 774, 1))
 
 # Histogram
 plt.hist(education.gmat) # histogram
-plt.hist(education.gmat, bins = [600, 680, 710, 740, 780], color = 'green', edgecolor="red") 
+plt.hist(education.gmat, bins = [600, 680, 710, 740, 780], color = 'green', edgecolor="red")   
 plt.hist(education.workex)
 plt.hist(education.workex, color='red', edgecolor = "black", bins = 6)
 
