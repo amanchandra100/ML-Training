@@ -1,2 +1,4 @@
-<h1>ML DAY 2</h1>
-<h1>EDA</h1>
+<h1>ML Training</h1>
+<a href=">ML Day 1</a>
+<a href=">ML Day 2</a>
+
