@@ -79,7 +79,17 @@ cars = pd.read_csv("Cars.csv")
 Ranges from -1 to +1. 
 Rule of thumb says |r| > 0.85 is a strong relation
 '''
-cars.corr() #corelation find karta hai
+cars_corr=cars.corr() #corelation find karta hai
+cars_corr
+
+#Plotting the correlation heatmap for visualising the correlation
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(7, 6))
+plt.title("Correlation between features", fontweight='bold', fontsize=14)
+sns.heatmap(cars_corr, annot=True, cmap=sns.color_palette("Blues", as_cmap=True) )    #sns.cubehelix_palette(as_cmap=True) 
+
+plt.show()
 
 '''We can observe that the correlation value for HP and SP is 0.973 and VOL and WT is 0.999 
 & hence we can ignore one of the variables in these pairs.
