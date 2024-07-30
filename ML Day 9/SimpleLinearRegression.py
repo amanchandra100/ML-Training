@@ -39,7 +39,7 @@ np.corrcoef(wcat.Waist, wcat.AT)
 cov_output = np.cov(wcat.Waist, wcat.AT)[0, 1]
 cov_output
 
-# wcat.cov()
+wcat.cov()
 
 
 # Import library
@@ -132,12 +132,12 @@ from sklearn.preprocessing import PolynomialFeatures
 poly_reg = PolynomialFeatures(degree = 2)
 X = wcat.iloc[:, 0:1].values
 X_poly = poly_reg.fit_transform(X)
-# y = wcat.iloc[:, 1].values
+#y = wcat.iloc[:, 1].values
 
 
 plt.scatter(wcat.Waist, np.log(wcat.AT))
 plt.plot(X, pred4, color = 'red')
-plt.legend(['Predicted line', 'Observed data'])
+plt.legend(['Observed data','Predicted line'])
 plt.show()
 
 
