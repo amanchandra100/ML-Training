@@ -95,7 +95,7 @@ table_rmse = pd.DataFrame(data)
 table_rmse
 
 # 'rmse_add_sea' has the least value among the models prepared so far Predicting new values 
-predict_data = pd.read_excel("C:/Data/forecasting/Predict_new.xlsx")
+predict_data = pd.read_excel("./Predict_new.xlsx")
 
 model_full = smf.ols('Footfalls ~ t+t_square+Jan+Feb+Mar+Apr+May+Jun+Jul+Aug+Sep+Oct+Nov', data=Walmart1).fit()
 
